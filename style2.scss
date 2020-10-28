@@ -1,0 +1,49 @@
+.sibling-fade {
+  visibility: hidden;
+}
+
+.sibling-fade > * {
+  visibility: visible;
+}
+
+.sibling-fade > * {
+  transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms;
+}
+
+.sibling-fade:hover > * {
+  opacity: 0.4;
+  transform: scale(0.9);
+}
+
+.sibling-fade > *:hover {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0ms, 0ms;
+}
+
+html {
+  display: flex;
+  height: 100%;
+}
+body {
+  background: #55f096;
+  padding: 10px;
+  max-width: 40em;
+  margin: auto;
+}
+
+.sibling-fade {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sibling-fade > * {
+  background: white;
+  padding: 1rem;
+  flex: auto;
+  margin: 0.3em;
+  text-align: center;
+  color: #55f06a;
+  font-size: 1.5em;
+  text-decoration: none;
+}
